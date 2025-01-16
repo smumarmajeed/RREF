@@ -1,0 +1,193 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background Video Styling */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place behind all content */
+    filter: brightness(50%); /* Dim the video for better text visibility */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    color: #333;
+    text-align: center;
+}
+
+/* Header Styling */
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Input Area Styling */
+.input-area {
+    margin-bottom: 20px;
+}
+
+.matrix-input label {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+input[type="number"] {
+    width: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #6a11cb;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #2575fc;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Dark Mode Styling */
+body.dark {
+    background: none;
+    color: #e0e0e0;
+}
+
+body.dark .container {
+    background: rgba(30, 30, 30, 0.9);
+    color: #fff; /* Make sure text is white in dark mode */
+}
+
+body.dark input, body.dark button {
+    border-color: #555;
+    background: #444;
+    color: #e0e0e0;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    z-index: 1000; /* Above the video */
+}
+
+.dark-mode-toggle label {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+body.dark .output-area table {
+    background: #444;
+    color: black;
+    border-color: #555;
+}
+
+body.dark .output-area table td {
+    color: black;
+}
+
+body.dark .output-area table td:hover {
+    background-color: #740ae6;
+    color:  black;
+}
+
+/* Steps Styling in Dark Mode */
+body.dark .output-area {
+    background-color: #333;  /* Dark background for steps */
+    color: #fff; /* White text for steps */
+}
+
+body.dark pre {
+    background-color: #222; /* Dark background for steps pre */
+    color: #fff; /* White text for steps */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Matrix Grid Styling */
+#matrix {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.matrix-row {
+    display: flex;
+    justify-content: center;
+}
+
+.matrix-cell input {
+    width: 60px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Output Area Styling */
+.output-area table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.output-area table tr {
+    background: #f9f9f9;
+}
+
+.output-area table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.output-area table td:hover {
+    background-color: #740ae6;
+    color:  black;
+}

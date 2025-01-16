@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RREF Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>RREF Calculator</h1>
+        </header>
+        <video class="background-video" autoplay muted loop>
+            <source src="back.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    
+        <div class="input-area">
+           
+
+            <div class="matrix-input">
+                <label for="rows">Rows:</label>
+                <input type="number" id="rows" min="1" value="3" onchange="generateMatrix()">
+                <label for="cols">Columns:</label>
+                <input type="number" id="cols" min="1" value="3" onchange="generateMatrix()">
+            </div>
+            <div id="matrix"></div>
+            <button onclick="calculateRREF()"><i class="fas fa-calculator"></i> Calculate RREF</button>
+
+
+
+        </div>
+        <div id="result" class="output-area"></div>
+    </div>
+    <script src="scripts.js"></script>
+    <div class="dark-mode-toggle">
+        <label>
+            <input type="checkbox" id="dark-mode-toggle" onchange="toggleDarkMode()"> Dark Mode
+        </label>
+    </div>
+    
+</body>
+</html>
+
